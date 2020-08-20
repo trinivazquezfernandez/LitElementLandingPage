@@ -1,0 +1,26 @@
+{
+  "version": 0.1,
+  "tags": [
+    {
+      "name": "lit-element-landing-page",
+      "description": "Landing page applicaion implemented with litElement",
+      "properties": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "LitElement landing page",
+          "default": "LitElement landing page"
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "description": "Home page",
+          "default": "main"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "cssProperties": []
+    }
+  ]
+}
