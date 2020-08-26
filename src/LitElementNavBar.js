@@ -13,7 +13,7 @@ export class LitElementNavBar extends LitElement {
     super();
     this.toggle = false;
     this.links = [
-      { text: 'Marcar mapa', activeClass: '', href: '/' },
+      { text: 'Marcar mapa', activeClass: '', href: '/map' },
       { text: 'Inicio', activeClass: 'active', href: '/' },
     ];
   }

@@ -1,12 +1,12 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
-import '../src/lit-element-landing-page.js';
+import '../../src/pages/lit-element-home-page.js';
 
-describe('LandingPage', () => {
+describe('HomePage', () => {
   let element;
   beforeEach(async () => {
     element = await fixture(
-      html` <lit-element-landing-page></lit-element-landing-page> `
+      html` <lit-element-home-page></lit-element-home-page> `
     );
   });
 
@@ -41,9 +41,7 @@ describe('LandingPage', () => {
 
   it('renders a image if avatarSrc is informed', async () => {
     const landing = await fixture(
-      html`
-        <lit-element-landing-page avatarSrc="./"></lit-element-landing-page>
-      `
+      html` <lit-element-home-page avatarSrc="./"></lit-element-home-page> `
     );
 
     const img = landing.shadowRoot.querySelector('img');
@@ -52,7 +50,7 @@ describe('LandingPage', () => {
 
   it('renders a image if avatarSrc is informed', async () => {
     const landing = await fixture(
-      html` <lit-element-landing-page name="lol"></lit-element-landing-page> `
+      html` <lit-element-home-page name="lol"></lit-element-home-page> `
     );
 
     const hello = landing.getPresentationContextText();
