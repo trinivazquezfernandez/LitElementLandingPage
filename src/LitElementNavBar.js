@@ -13,20 +13,25 @@ export class LitElementNavBar extends LitElement {
     super();
     this.toggle = false;
     this.links = [
-      { text: 'Marcar mapa', active: true, href: '/' },
-      { text: 'Home', active: true, href: '/' },
+      { text: 'Marcar mapa', activeClass: '', href: '/' },
+      { text: 'Inicio', activeClass: 'active', href: '/' },
     ];
   }
 
   static get styles() {
     return css`
-      /* Add a black background color to the top navigation */
+      .main-menu-container {
+        --main-bg-color: #b2d732;
+        --active-bg-color: #66b032;
+        --main-color: #092834;
+      }
+
       .main-menu-container {
         display: flex;
         flex-flow: row;
         justify-content: flex-end;
-        background-color: #b2d732;
-        color: #092834;
+        background-color: var(--main-bg-color);
+        color: var(--main-color);
         font-weight: bold;
       }
 
@@ -38,7 +43,7 @@ export class LitElementNavBar extends LitElement {
 
       .main-menu-container a:hover,
       .main-menu-container a.active {
-        background-color: #66b032;
+        background-color: var(--active-bg-color);
       }
 
       .icon {
@@ -72,7 +77,7 @@ export class LitElementNavBar extends LitElement {
         ${this.links.map(
           l =>
             html`<a
-              class="menu ${l.active}"
+              class="menu ${l.activeClass}"
               toggle=${this.toggle}
               href=${l.href}
               >${l.text}</a
